@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  background-color: #1677ff;
+}
+
+
+// css
+.cloudContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Mây trái */
+.cloud {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 100vh;
+}
+
+.cloudLeft {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: moveLeft 2s ease-in-out forwards;
+  background-image: url('/images/1-Photoroom.png');
+}
+
+.cloudRight {
+  right: 50%;
+  transform: translate(50%, -50%);
+  animation: moveRight 2s ease-in-out forwards;
+  background-image: url('/images/2-Photoroom.png');
+}
+
+/* Nội dung ẩn lúc đầu */
+.content {
+  opacity: 0;
+  transition: opacity 1s ease-in-out 2s;
+}
+
+.visible {
+  opacity: 1;
+}
+
+/* Hiệu ứng mây trượt */
+@keyframes moveLeft {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(-150%, -50%);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translate(50%, -50%);
+  }
+  100% {
+    transform: translate(150%, -50%);
+  }
+}

@@ -4,8 +4,8 @@ const Index = () => {
   const [isAnimating, setIsAnimating] = useState(true);
 
   useEffect(() => {
-    // const timer = setTimeout(() => setIsAnimating(false), 2000); // Hiệu ứng chạy trong 2 giây
-    // return () => clearTimeout(timer);
+    const timer = setTimeout(() => setIsAnimating(false), 1000); // Hiệu ứng chạy trong 2 giây
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -16,9 +16,16 @@ const Index = () => {
           <div className="cloud cloudRight" />
         </div>
       )}
-      <div className={`content ${!isAnimating ? "visible" : ""}`}>
-        {/* {children} */}
-        asdasqweqwe qweqwe asda weq
+      <div className="h-screen bg-pink-200 py-12">
+        <div
+          data-aos="fade-down"
+          className="text-center text-[40px] windsong"
+          style={{ fontWeight: 500 }}
+        >Save The Date</div>
+        <div
+          data-aos="fade-down"
+          className="text-center text-[30px] ms-madi"
+        >Trần Lợi & Thu Cúc</div>
       </div>
     </>
   );

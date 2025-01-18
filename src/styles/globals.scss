@@ -71,6 +71,9 @@ button,
   transform: translate(-50%, -50%);
   animation: moveLeft 2s ease-in-out forwards;
   background-image: url('/images/1-Photoroom.png');
+  background-size: none; /* Hoặc dùng contain tùy mục đích */
+  background-position: none; /* Đặt tâm ảnh nền */
+  background-repeat: no-repeat; /* Ngăn không lặp ảnh */
 }
 
 .cloudRight {
@@ -78,6 +81,31 @@ button,
   transform: translate(50%, -50%);
   animation: moveRight 2s ease-in-out forwards;
   background-image: url('/images/2-Photoroom.png');
+  background-size: none; /* Hoặc dùng contain tùy mục đích */
+  background-position: none; /* Đặt tâm ảnh nền */
+  background-repeat: no-repeat; /* Ngăn không lặp ảnh */
+}
+
+@media only screen and (min-width: 720px) {
+  .cloudLeft {
+    left: 20%;
+    transform: translate(-50%, -50%);
+    animation: moveLeft 2s ease-in-out forwards;
+    background-image: url('/images/may-l.png');
+    background-size: cover; /* Hoặc dùng contain tùy mục đích */
+    background-position: center; /* Đặt tâm ảnh nền */
+    background-repeat: no-repeat; /* Ngăn không lặp ảnh */
+  }
+  
+  .cloudRight {
+    right: 20%;
+    transform: translate(50%, -50%);
+    animation: moveRight 2s ease-in-out forwards;
+    background-image: url('/images/may-r.png');
+    background-size: cover; /* Hoặc dùng contain tùy mục đích */
+    background-position: center; /* Đặt tâm ảnh nền */
+    background-repeat: no-repeat; /* Ngăn không lặp ảnh */
+  }
 }
 
 /* Nội dung ẩn lúc đầu */

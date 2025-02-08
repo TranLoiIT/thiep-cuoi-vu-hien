@@ -1,7 +1,7 @@
-import { authReducer } from "./auth";
+// import { authReducer } from "./auth";
 
-const rootReducer = {
-    auth: authReducer
-};
+// const rootReducer = {
+//     auth: authReducer
+// };
   
-export default rootReducer;
+// export default rootReducer;

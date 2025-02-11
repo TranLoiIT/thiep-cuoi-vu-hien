@@ -66,8 +66,8 @@ const Index = () => {
       </div>
       <div className="">
         <div
-          data-aos="fade-down"
-          data-aos-delay="100"
+          // data-aos="fade-down"
+          // data-aos-delay="100"
           className="text-center text-[22px] ms-madi leading-[24px]"
         >
           Hôn nhân là chuyện cả đời <br />

@@ -3,7 +3,7 @@ import { Head, Html, Main, NextScript } from "next/document";
 export default function Document() {
   const siteUrl = "https://thiep-cuoi-cuc-loi.netlify.app/";
   return (
-    <Html lang="en">
+    <Html lang="vn">
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -24,8 +24,8 @@ export default function Document() {
           content="Thư mời cưới Trần Lợi & Thu Cúc. Mời mọi người đến chung vui cùng bọn em và gia đình ạ."
         />
         <meta property="og:image" content={`${siteUrl}/images/3.jpg`} />
-        <meta property="og:image:width" content="520" />
-        <meta property="og:image:height" content="520" />
+        <meta property="og:image:width" content="300" />
+        <meta property="og:image:height" content="300" />
       </Head>
       <body>
         <Main />

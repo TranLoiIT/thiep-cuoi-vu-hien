@@ -1,10 +1,7 @@
 import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Document() {
-  const siteUrl =
-    typeof window !== "undefined"
-      ? window.location.origin
-      : "https://yourdomain.com";
+  const siteUrl = "https://thiep-cuoi-cuc-loi.netlify.app/";
   return (
     <Html lang="en">
       <Head>
@@ -20,10 +17,7 @@ export default function Document() {
           content="Thư mời cưới Trần Lợi & Thu Cúc. Mời mọi người đến chung vui cùng bọn em và gia đình ạ."
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://thiep-cuoi-cuc-loi.netlify.app/"
-        />
+        <meta property="og:url" content={siteUrl} />
         <meta property="og:title" content="Thư mời cưới Trần Lợi & Thu Cúc" />
         <meta
           property="og:description"

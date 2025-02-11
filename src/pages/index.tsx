@@ -64,7 +64,7 @@ const Index = () => {
           </div>
         </div>
       </div>
-      <div className="">
+      <div className="py-10">
         <div
           // data-aos="fade-down"
           // data-aos-delay="100"

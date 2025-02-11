@@ -45,6 +45,26 @@ button,
   font-style: normal;
 }
 
+.domine {
+  font-family: "Domine", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.redditSansCondensed {
+  font-family: "Reddit Sans Condensed", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.notoSans {
+  font-family: "Noto Sans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
 
 // css
 .cloudContainer {

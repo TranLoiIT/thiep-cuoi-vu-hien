@@ -9,25 +9,236 @@ const Index = () => {
   }, []);
 
   return (
-    <>
+    <div className="bg-[#fbeff6]">
       {isAnimating && (
         <div className="cloudContaine">
           <div className="cloud cloudLeft" />
           <div className="cloud cloudRight" />
         </div>
       )}
-      <div className="h-screen bg-pink-200 py-12">
+      <div className="h-screen py-12">
         <div
+          className="text-center text-[48px] windsong"
           data-aos="fade-down"
-          className="text-center text-[40px] windsong"
+          data-aos-delay="600"
           style={{ fontWeight: 500 }}
-        >Save The Date</div>
+        >
+          SaveTheDate
+        </div>
         <div
           data-aos="fade-down"
           className="text-center text-[30px] ms-madi"
-        >Trần Lợi & Thu Cúc</div>
+          data-aos-delay="600"
+        >
+          Trần Lợi & Thu Cúc
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-delay="700"
+          className="flex justify-center items-center mt-[42px]"
+        >
+          <img src="/images/6.jpg" alt="banner" className="w-[80%]" />
+        </div>
+
+        <div
+          data-aos="fade-up"
+          data-aos-delay="800"
+          className="flex flex-col justify-center items-center mt-2"
+        >
+          <div className="w-[80%] flex items-center px-6">
+            <div className="px-2 text-[20px] leading-[24px] w-[35%] domine font-medium">
+              <div>17:00</div>
+              <div>Thứ 7</div>
+            </div>
+            <div className="border-r border-solid border-black h-[42px] opacity-70" />
+            <div className="flex justify-end items-center w-[65%] gap-5">
+              <div className="text-[36px] domine font-medium">23.03</div>
+              <div className="text-[20px] leading-[24px] domine font-medium">
+                <div>20</div>
+                <div>25</div>
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-center items-center mt-1 italic text-gray-700">
+            (Ngày 23 Tháng 03 Năm Ất Tỵ )
+          </div>
+        </div>
       </div>
-    </>
+      <div className="">
+        <div
+          data-aos="fade-down"
+          data-aos-delay="100"
+          className="text-center text-[22px] ms-madi leading-[24px]"
+        >
+          Hôn nhân là chuyện cả đời <br />
+          Yêu người vừa ý, cưới người mình thương
+        </div>
+        <div className="mt-[56px] grid grid-cols-2 gap-x-3 gap-y-4 px-1">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="50"
+            className="border-[4px] border-pink-200"
+          >
+            <img src="/images/1.jpg" />
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            className="flex flex-col items-center justify-center"
+          >
+            <div className="uppercase text-[16px] font-bold redditSansCondensed">
+              Nhà trai
+            </div>
+            <div className="uppercase text-[16px] font-bold redditSansCondensed">
+              Ông Trần Mạnh Thắng
+            </div>
+            <div className="uppercase text-[16px] font-bold redditSansCondensed">
+              Bà Tạ Thị Cơ
+            </div>
+            <div className="mt-5 text-center">
+              <p className="italic text-gray-700">Chú Rể</p>
+              <p className="text-[36px] ms-madi">Trần Lợi</p>
+            </div>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className="flex flex-col items-center justify-center"
+          >
+            <div className="uppercase text-[16px] font-bold redditSansCondensed">
+              Nhà gái
+            </div>
+            <div className="uppercase text-[16px] font-bold redditSansCondensed">
+              Ông Đàm Viết Phú
+            </div>
+            <div className="uppercase text-[16px] font-bold redditSansCondensed">
+              Bà Phạm Thị Yến
+            </div>
+            <div className="mt-5 text-center">
+              <p className="italic text-gray-700">Cô Dâu</p>
+              <p className="text-[36px] ms-madi">Thu Cúc</p>
+            </div>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="10"
+            className="border-[4px] border-pink-200"
+          >
+            <img src="/images/9.jpg" />
+          </div>
+        </div>
+
+        <div className="pt-5 pb-12">
+          <div className="flex justify-center mt-1">
+            <div className="w-2/5 border-t-[1.5px] border-t-black" />
+          </div>
+          <div data-aos="fade-up" data-aos-delay="10" className="text-center">
+            <div className="text-center text-[36px] leading-[40px] ms-madi mt-2 font-medium">
+              Thư Mời
+            </div>
+            <p className="uppercase text-[14px]">
+              Tham dự lễ thành hôn của Trần Lợi & Thu Cúc
+            </p>
+          </div>
+          <div className="flex justify-start items-center gap-2 mt-5">
+            <img
+              data-aos="fade-up"
+              data-aos-delay="100"
+              className="w-[30%]"
+              src="/images/8.jpg"
+            />
+            <img
+              data-aos="fade-zoom-in"
+              data-aos-easing="ease-in-back"
+              data-aos-delay="10"
+              data-aos-offset="0"
+              className="w-[36%]"
+              src="/images/3.jpg"
+            />
+            <img
+              data-aos="fade-up"
+              data-aos-delay="100"
+              className="w-[30%]"
+              src="/images/4.jpg"
+            />
+          </div>
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-5 mt-6">
+            <div className="flex justify-center items-center redditSansCondensed">
+              <div
+                data-aos="zoom-in"
+                className="w-[90%] rounded-lg border-2 text-center p-3"
+              >
+                <div className="uppercase font-bold text-[20px]">
+                  Tiệc cưới nhà Trai
+                </div>
+                <div className="text-gray-700">Thứ 7 | 17H00</div>
+                <div className="font-medium text-[20px]">
+                  2 2 . 0 3 . 2 0 2 5
+                </div>
+                <div className="text-gray-700 italic mb-4">
+                  (Tức Ngày 22 Tháng 03 Năm Tân Tỵ)
+                </div>
+                <div className="flex flex-col justify-center items-center gap-1">
+                  <div className="bg-[#d9c9aa] rounded-lg w-4/5 py-[6px] text-sm font-medium cursor-pointer uppercase">
+                    Xác nhận Tham Dự
+                  </div>
+                  <div className="bg-pink-300 rounded-lg w-2/5 py-[10px] text-sm font-medium cursor-pointer uppercase">
+                    Gửi mời cưới
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-center items-center redditSansCondensed">
+              <div
+                data-aos="zoom-in"
+                className="w-[90%] rounded-lg border-2 text-center p-3"
+              >
+                <div className="uppercase font-bold text-[20px]">
+                  Tiệc cưới nhà gái
+                </div>
+                <div className="text-gray-700">Thứ 7 | 17H00</div>
+                <div className="font-medium text-[20px]">
+                  2 2 . 0 3 . 2 0 2 5
+                </div>
+                <div className="text-gray-700 italic mb-4">
+                  (Tức Ngày 22 Tháng 03 Năm Tân Tỵ)
+                </div>
+                <div className="flex flex-col justify-center items-center gap-1">
+                  <div className="bg-[#d9c9aa] rounded-lg w-4/5 py-[6px] text-sm font-medium cursor-pointer uppercase">
+                    Xác nhận Tham Dự
+                  </div>
+                  <div className="bg-pink-300 rounded-lg w-2/5 py-[10px] text-sm font-medium cursor-pointer uppercase">
+                    Gửi mời cưới
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex justify-center items-center redditSansCondensed">
+              <div
+                data-aos="fade-up"
+                data-aos-delay="10"
+                className="w-[90%] text-center"
+              >
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                  className="text-[20px] leading-[24px] domine font-medium uppercase"
+                >
+                  Save the date
+                </div>
+                <div className="text-[16px] leading-[16px] domine font-medium uppercase">
+                  Tháng 1 - 2025
+                </div>
+                {/* imgae lịch */}
+
+                <div className=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

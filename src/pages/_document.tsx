@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-title-in-document-head */
 import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -8,7 +9,7 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Reddit+Sans+Condensed:wght@200..900&family=Domine:wght@400..700&family=Great+Vibes&family=Ms+Madi&family=WindSong:wght@400;500&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Reddit+Sans+Condensed:wght@200..900&family=Domine:wght@400..700&family=Parisienne&family=Great+Vibes&family=Ms+Madi&family=WindSong:wght@400;500&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet"
         />
         <title>THƯ MỜI CƯỚI TRẦN LỢI & THU CÚC</title>

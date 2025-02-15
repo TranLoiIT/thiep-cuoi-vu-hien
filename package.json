@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.20.6",
     "@types/aos": "^3.0.7",
     "@types/node": "^22.10.2",
     "@types/react": "18.2.21",

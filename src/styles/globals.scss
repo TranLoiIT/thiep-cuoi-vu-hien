@@ -65,6 +65,24 @@ button,
     "wdth" 100;
 }
 
+.bodoniModa {
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.parisienneRegular {
+  font-family: "Parisienne", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 
 // css
 .cloudContainer {
@@ -155,4 +173,8 @@ button,
   100% {
     transform: translate(150%, -50%);
   }
+}
+
+.gm-fullscreen-control {
+  display: none;
 }

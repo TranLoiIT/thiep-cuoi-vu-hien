@@ -49,7 +49,7 @@ const Index = () => {
             data-aos-delay="700"
             className="flex justify-center items-center mt-[42px]"
           >
-            <img src="/images/6.jpg" alt="banner" className="w-[80%]" />
+            <img src="/images/11.jpg" alt="banner" className="w-[80%]" />
           </div>
           <div
             data-aos="fade-up"
@@ -167,7 +167,7 @@ const Index = () => {
                 data-aos-delay="10"
                 data-aos-offset="0"
                 className="w-[36%]"
-                src="/images/3.jpg"
+                src="/images/6.jpg"
               />
               <img
                 data-aos="fade-up"
@@ -318,7 +318,74 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="mt-4 text-center">--chưa thêm--</div>
+            <div className="grid grid-cols-2 gap-3">
+              {/* r */}
+              <div className="flex flex-col gap-3">
+                <img
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                  src="/images/14.jpg" alt="1"
+                />
+                <img
+                  data-aos="fade-up"
+                  data-aos-delay="150"
+                  src="/images/18.jpg" alt="1"
+                />
+                <img
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                  src="/images/3.jpg" alt="1"
+                />
+                <img
+                  data-aos="fade-up"
+                  data-aos-delay="150"
+                  src="/images/7.jpg" alt="1"
+                />
+                <img
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                  src="/images/15.jpg" alt="1"
+                />
+              </div>
+
+              {/* l */}
+              <div className="flex flex-col gap-3">
+                <img
+                  className="mt-5"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                  src="/images/5.jpg" alt="1"
+                />
+                <div className="flex flex-col gap-3">
+                  <img
+                    data-aos="fade-up"
+                    data-aos-delay="130"
+                    className="w-full" src="/images/13.jpg" alt="1"
+                  />
+                  <img
+                    data-aos="fade-up"
+                    data-aos-delay="150"
+                    className="w-full" src="/images/17.jpg" alt="1"
+                  />
+                </div>
+                <img
+                  className="mt-1"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                  src="/images/12.jpg" alt="1"
+                />
+                <img
+                  data-aos="fade-up"
+                  data-aos-delay="250"
+                  src="/images/10.jpg" alt="1"
+                />
+                <img
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                  src="/images/2.jpg" alt="1"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </>}

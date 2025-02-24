@@ -203,12 +203,12 @@ const Index = () => {
                     <div className="uppercase font-bold text-[20px]">
                       Tiệc cưới nhà Trai
                     </div>
-                    <div className="text-gray-700">Thứ 7 | 17H00</div>
+                    <div className="text-gray-700">Chủ Nhật | 10H30</div>
                     <div className="font-medium text-[20px]">
-                      2 2 . 0 3 . 2 0 2 5
+                      2 3 . 0 3 . 2 0 2 5
                     </div>
                     <div className="text-gray-700 italic mb-4">
-                      (Tức Ngày 22 Tháng 03 Năm Ất Tỵ)
+                      (Tức Ngày 24 Tháng 02 Năm Ất Tỵ)
                     </div>
                     <div className="flex flex-col justify-center items-center gap-1">
                       <div
@@ -234,12 +234,12 @@ const Index = () => {
                     <div className="uppercase font-bold text-[20px]">
                       Tiệc cưới nhà gái
                     </div>
-                    <div className="text-gray-700">Thứ 7 | 17H00</div>
+                    <div className="text-gray-700">Chủ Nhật | 10H30</div>
                     <div className="font-medium text-[20px]">
-                      2 2 . 0 3 . 2 0 2 5
+                      2 3 . 0 3 . 2 0 2 5
                     </div>
                     <div className="text-gray-700 italic mb-4">
-                      (Tức Ngày 22 Tháng 03 Năm Ất Tỵ)
+                      (Tức Ngày 24 Tháng 02 Năm Ất Tỵ)
                     </div>
                     <div className="flex flex-col justify-center items-center gap-1">
                       <div
@@ -460,10 +460,10 @@ const Index = () => {
           </div>
 
           {/* thanks you */}
-          <div className="relative h-[300px]">
+          <div className="relative h-[500px]">
             <img
               src="/images/18.jpg"
-              className="h-[300px] object-cover w-full opacity-50"
+              className="h-[500px] object-cover w-full opacity-50"
             />
             <div className="absolute z-20 inset-x-0 inset-y-0 flex items-center">
               <div className="min-w-full text-center">

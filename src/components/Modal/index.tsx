@@ -50,19 +50,18 @@ const ModalCustom = ({
   }, []);
 
   const onFinish = async (data: any) => {
-    fetch("http://localhost:5000/save", {
+    fetch("https://67bd3236321b883e790b868f.mockapi.io/api/wishes", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        _id: guidGenerator(),
         house,
         ...data,
       }),
     })
       .then((response) => response.json())
       .then((result: any) => {
-        console.log("Data saved:", result);
-        if (result.success) {
+        // console.log("Data saved:", result);
+        if (result.id) {
           setSuccess(true);
         }
       })
@@ -155,7 +154,7 @@ const ModalCustom = ({
                     </Form.Item>
                     <Form.Item
                       label="Gửi lời chúc"
-                      name="des"
+                      name="desc"
                       rules={[
                         {
                           required: true,

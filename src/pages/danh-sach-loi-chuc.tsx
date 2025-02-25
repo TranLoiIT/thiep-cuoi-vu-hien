@@ -1,8 +1,13 @@
 import { Table } from "antd";
+import { ArrowLeft } from "iconsax-react";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { getData } from "../api";
 
 const DanhSachLoiChuc = () => {
   const [data, setData] = useState<any>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const router = useRouter();
 
   const columns: any = [
     {
@@ -28,31 +33,40 @@ const DanhSachLoiChuc = () => {
     },
     {
       title: "Lời chú",
-      dataIndex: "des",
+      dataIndex: "desc",
       width: 420,
     },
   ];
-
-  const getData = () => {
-    fetch("http://localhost:5000/data")
-      .then((response) => response.json())
-      .then((jsonData) => {
-        setData(jsonData);
-      })
-      .catch((error) => console.error("Error loading JSON:", error));
-  };
-
   useEffect(() => {
-    getData();
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const res = await getData();
+        // console.log("res :>> ", res);
+        setData(res);
+      } catch (error) {
+        console.log("error :>> ", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
   }, []);
 
   return (
     <div className="h-screen w-full px-3 py-5 bg-pink-100">
-      <div className="text-[18px] uppercase">Danh sác gửi lời chúc</div>
+      <div className="flex justify-start items-center gap-5 mb-8">
+        <ArrowLeft onClick={() => router.push("/")} size="32" color="#000000" />
+        <div className="text-[18px] uppercase font-medium">
+          Danh sác gửi lời chúc
+        </div>
+      </div>
       <div>
         <Table
           size="middle"
-          rowKey="_id"
+          rowKey="id"
+          loading={loading}
           columns={columns}
           dataSource={data}
           pagination={false}

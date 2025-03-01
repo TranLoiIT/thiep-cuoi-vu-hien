@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.6.1",
     "@react-google-maps/api": "^2.20.6",
     "@types/aos": "^3.0.7",
     "@types/node": "^22.10.2",

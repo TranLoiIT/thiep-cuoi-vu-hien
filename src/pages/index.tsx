@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import { useEffect, useState } from "react";
+import { MutedOutlined, SoundOutlined } from "@ant-design/icons";
+import { FloatButton } from "antd";
+import { useEffect, useRef, useState } from "react";
 import CalendarCom from "../components/Calendar";
 import MapsCom from "../components/Maps";
 import ModalCustom from "../components/Modal";
@@ -15,25 +17,52 @@ const Index = () => {
   const [location, setLocation] = useState("nam");
   const [modal, setModal] = useState<any>(null);
   const [qr, setQr] = useState<any>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);const [isPlaying, setIsPlaying] = useState(false);
+
+  const togglePlay = () => {
+    console.log('11', 11)
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play().catch(error => console.log("Autoplay bị chặn:", error));
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
 
   const handleOpenTab = (location: string) => {
     window.open(location, "_blank", "noopener,noreferrer");
   };
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsAnimating(false), 1000); // Hiệu ứng chạy trong 2 giây
+    const timer = setTimeout(() => {
+      setIsAnimating(false);
+      audioRef?.current?.play();
+    }, 1000); // Hiệu ứng chạy trong 2 giây
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="bg-[#fbeff6]">
+      <FloatButton
+        icon={!isPlaying ? <MutedOutlined /> : <SoundOutlined />} 
+        // type="primary"
+        style={{ insetInlineEnd: 24, background: "#FFF", bottom: 20 }}
+        onClick={() => togglePlay()}
+      />
+      <audio ref={audioRef} loop>
+        <source src="/music/Em-Dong-Y-I-Do-Duc-Phuc-911.mp3" type="audio/mp3" />
+      </audio>
+
       {isAnimating ? (
         <div className="cloudContaine">
           <div className="cloud cloudLeft" />
           <div className="cloud cloudRight" />
         </div>
       ) : (
-        <>
+        <div>
+          {/* banner */}
           <div className="h-screen relative py-5">
             <div
               className="text-center text-[48px] windsong"
@@ -92,6 +121,7 @@ const Index = () => {
               alt="tulip"
             />
           </div>
+          {/* content */}
           <div className="py-10">
             <div
               data-aos="fade-down"
@@ -185,7 +215,7 @@ const Index = () => {
                   data-aos-delay="10"
                   data-aos-offset="0"
                   className="w-[36%]"
-                  src="/images/6.jpg"
+                  src="/images/19.jpg"
                 />
                 <img
                   data-aos="fade-up"
@@ -387,7 +417,7 @@ const Index = () => {
                   <img
                     data-aos="fade-up"
                     data-aos-delay="150"
-                    src="/images/18.jpg"
+                    src="/images/20.jpg"
                     alt="1"
                   />
                   <img
@@ -405,7 +435,7 @@ const Index = () => {
                   <img
                     data-aos="fade-up"
                     data-aos-delay="300"
-                    src="/images/15.jpg"
+                    src="/images/15.JPG"
                     alt="1"
                   />
                 </div>
@@ -478,7 +508,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-        </>
+        </ div>
       )}
       {modal && <ModalCustom house={modal} onClose={() => setModal(null)} />}
       {qr && <ModalCustom house={qr} onClose={() => setQr(null)} showQR />}

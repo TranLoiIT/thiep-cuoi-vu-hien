@@ -23,11 +23,11 @@ export default function Document() {
         <meta property="og:title" content="Thư mời cưới Trần Lợi & Thu Cúc" />
         <meta
           property="og:description"
-          content="Thư mời cưới Trần Lợi & Thu Cúc. Mời mọi người đến chung vui cùng bọn em và gia đình ạ."
+          content="Thư mời cưới Trần Lợi & Thu Cúc. Mời mọi người đến chung vui cùng bọn em và gia đình."
         />
-        <meta property="og:image" content={`${siteUrl}/images/3.jpg`} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image" content={`${siteUrl}/images/img-300.png`} />
+        <meta property="og:image:width" content="300" />
+        <meta property="og:image:height" content="300" />
       </Head>
       <body>
         <Main />

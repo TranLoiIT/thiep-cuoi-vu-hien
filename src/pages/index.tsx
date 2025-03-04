@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import { MutedOutlined, SoundOutlined } from "@ant-design/icons";
-import { FloatButton } from "antd";
 import { useEffect, useRef, useState } from "react";
 import CalendarCom from "../components/Calendar";
 import MapsCom from "../components/Maps";
@@ -14,18 +13,22 @@ const location_gai =
 
 const Index = () => {
   const [isAnimating, setIsAnimating] = useState(true);
+  const [tooltip, setTooltip] = useState(true);
   const [location, setLocation] = useState("nam");
   const [modal, setModal] = useState<any>(null);
   const [qr, setQr] = useState<any>(null);
-  const audioRef = useRef<HTMLAudioElement | null>(null);const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const togglePlay = () => {
-    console.log('11', 11)
+    // console.log("11", 11);
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause();
       } else {
-        audioRef.current.play().catch(error => console.log("Autoplay bị chặn:", error));
+        audioRef.current
+          .play()
+          .catch((error) => console.log("Autoplay bị chặn:", error));
       }
       setIsPlaying(!isPlaying);
     }
@@ -40,17 +43,33 @@ const Index = () => {
       setIsAnimating(false);
       audioRef?.current?.play();
     }, 1000); // Hiệu ứng chạy trong 2 giây
+
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener(
+      "click",
+      () => {
+        togglePlay();
+      },
+      { once: true }
+    );
+    window.addEventListener(
+      "scroll",
+      () => {
+        console.log("1 :>> ", 1);
+        setTimeout(() => {
+          console.log("2 :>> ", 2);
+          setTooltip(false);
+        }, 5 * 1000);
+      },
+      { once: true }
+    );
   }, []);
 
   return (
     <div className="bg-[#fbeff6]">
-      <FloatButton
-        icon={!isPlaying ? <MutedOutlined /> : <SoundOutlined />} 
-        // type="primary"
-        style={{ insetInlineEnd: 24, background: "#FFF", bottom: 20 }}
-        onClick={() => togglePlay()}
-      />
       <audio ref={audioRef} loop>
         <source src="/music/Em-Dong-Y-I-Do-Duc-Phuc-911.mp3" type="audio/mp3" />
       </audio>
@@ -62,6 +81,27 @@ const Index = () => {
         </div>
       ) : (
         <div>
+          <div className="ping z-50">
+            <div
+              className="absolute z-50 flex justify-center items-center bg-pink-400 h-10 w-10 rounded-full"
+              onClick={() => togglePlay()}
+            >
+              {!isPlaying ? (
+                <MutedOutlined style={{ color: "#FFF" }} />
+              ) : (
+                <SoundOutlined style={{ color: "#FFF" }} />
+              )}
+            </div>
+            {tooltip && (
+              <div
+                data-aos="fade-right"
+                // data-aos-delay="10"
+                className="h-10 w-[286px] text-[12px] bg-white border border-pink-400 rounded-full flex justify-end items-center pr-2"
+              >
+                Click vào đây nếu như bạn muốn phát nhạc!
+              </div>
+            )}
+          </div>
           {/* banner */}
           <div className="h-screen relative py-5">
             <div
@@ -508,7 +548,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-        </ div>
+        </div>
       )}
       {modal && <ModalCustom house={modal} onClose={() => setModal(null)} />}
       {qr && <ModalCustom house={qr} onClose={() => setQr(null)} showQR />}

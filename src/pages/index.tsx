@@ -48,13 +48,13 @@ const Index = () => {
   }, []);
 
   useEffect(() => {
-    document.addEventListener(
-      "click",
-      () => {
-        togglePlay();
-      },
-      { once: true }
-    );
+    // document.addEventListener(
+    //   "click",
+    //   () => {
+    //     togglePlay();
+    //   },
+    //   { once: true }
+    // );
     window.addEventListener(
       "scroll",
       () => {
@@ -136,8 +136,8 @@ const Index = () => {
             >
               <div className="w-[80%] flex items-center px-6">
                 <div className="px-2 text-[20px] leading-[24px] w-[35%] domine font-medium">
-                  <div>17:00</div>
-                  <div>Thứ 7</div>
+                  <div>13:00</div>
+                  <div>Chủ Nhật</div>
                 </div>
                 <div className="border-r border-solid border-black h-[42px] opacity-70" />
                 <div className="flex justify-end items-center w-[65%] gap-5">
@@ -149,7 +149,7 @@ const Index = () => {
                 </div>
               </div>
               <div className="flex justify-center items-center mt-1 italic text-gray-700">
-                (Ngày 23 Tháng 03 Năm Ất Tỵ )
+                (Ngày 24 Tháng 03 Năm Ất Tỵ )
               </div>
             </div>
 
@@ -258,7 +258,7 @@ const Index = () => {
                   data-aos-delay="10"
                   data-aos-offset="0"
                   className="w-[36%]"
-                  src="/images/19.jpg"
+                  src="/images/16.jpg"
                 />
                 <img
                   data-aos="fade-up"
@@ -276,12 +276,12 @@ const Index = () => {
                     <div className="uppercase font-bold text-[20px]">
                       Tiệc cưới nhà Trai
                     </div>
-                    <div className="text-gray-700">Chủ Nhật | 10H30</div>
+                    <div className="text-gray-700">Thứ 7 | 17H00</div>
                     <div className="font-medium text-[20px]">
-                      2 3 . 0 3 . 2 0 2 5
+                      2 2 . 0 3 . 2 0 2 5
                     </div>
                     <div className="text-gray-700 italic mb-4">
-                      (Tức Ngày 24 Tháng 02 Năm Ất Tỵ)
+                      (Tức Ngày 23 Tháng 02 Năm Ất Tỵ)
                     </div>
                     <div className="flex flex-col justify-center items-center gap-1">
                       <div
@@ -294,7 +294,7 @@ const Index = () => {
                         onClick={() => setQr("nam")}
                         className="bg-pink-300 rounded-lg w-2/5 py-[10px] text-sm font-medium cursor-pointer uppercase"
                       >
-                        Gửi mời cưới
+                        Quét gửi yêu thương
                       </div>
                     </div>
                   </div>
@@ -325,7 +325,7 @@ const Index = () => {
                         onClick={() => setQr("nu")}
                         className="bg-pink-300 rounded-lg w-2/5 py-[10px] text-sm font-medium cursor-pointer uppercase"
                       >
-                        Gửi mời cưới
+                        Quét gửi yêu thương
                       </div>
                     </div>
                   </div>
@@ -460,7 +460,7 @@ const Index = () => {
                   <img
                     data-aos="fade-up"
                     data-aos-delay="150"
-                    src="/images/20.jpg"
+                    src="/images/18.jpg"
                     alt="1"
                   />
                   <img
@@ -533,10 +533,10 @@ const Index = () => {
           </div>
 
           {/* thanks you */}
-          <div className="relative h-[500px]">
+          <div className="relative h-[700px]">
             <img
-              src="/images/18.jpg"
-              className="h-[500px] object-cover w-full opacity-50"
+              src="/images/6.jpg"
+              className="h-[700px] object-cover w-full opacity-50"
             />
             <div className="absolute z-20 inset-x-0 inset-y-0 flex items-center">
               <div className="min-w-full text-center">
@@ -544,9 +544,9 @@ const Index = () => {
                   data-aos="fade-up"
                   data-aos-delay="700"
                   className="text-[64px] ms-madi"
-                  style={{ fontWeight: 500 }}
+                  style={{ fontWeight: 700 }}
                 >
-                  Thanks You.
+                  Thank You.
                 </div>
               </div>
             </div>
@@ -555,6 +555,7 @@ const Index = () => {
       )}
       {modal && <ModalCustom house={modal} onClose={() => setModal(null)} />}
       {qr && <ModalCustom house={qr} onClose={() => setQr(null)} showQR />}
+      {/* <ViewImage /> */}
     </div>
   );
 };

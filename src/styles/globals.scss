@@ -211,3 +211,10 @@ button,
     opacity: 0;
   }
 }
+
+.og-image {
+  object-fit: cover; /* Cắt ảnh để vừa với khung */
+  object-position: center; /* Căn giữa ảnh */
+  width: 1200px;
+  height: 630px;
+}

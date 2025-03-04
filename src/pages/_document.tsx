@@ -26,8 +26,8 @@ export default function Document() {
           content="Thư mời cưới Trần Lợi & Thu Cúc. Mời mọi người đến chung vui cùng bọn em và gia đình ạ."
         />
         <meta property="og:image" content={`${siteUrl}/images/3.jpg`} />
-        <meta property="og:image:width" content="300" />
-        <meta property="og:image:height" content="300" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
       </Head>
       <body>
         <Main />

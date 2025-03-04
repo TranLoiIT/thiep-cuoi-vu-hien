@@ -16,14 +16,14 @@ export default function Document() {
         <title>THƯ MỜI CƯỚI TRẦN LỢI & THU CÚC</title>
         <meta
           name="description"
-          content="Thư mời cưới Trần Lợi & Thu Cúc. Mời mọi người đến chung vui cùng bọn em và gia đình ạ."
+          content="Thư mời cưới Trần Lợi & Thu Cúc. Thay cho tấm thiệp hồng chưa kịp trao tay. Sự có mặt của bạn là niềm vui và niềm vinh hạnh của gia đình"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={siteUrl} />
         <meta property="og:title" content="Thư mời cưới Trần Lợi & Thu Cúc" />
         <meta
           property="og:description"
-          content="Thư mời cưới Trần Lợi & Thu Cúc. Mời mọi người đến chung vui cùng bọn em và gia đình."
+          content="Thư mời cưới Trần Lợi & Thu Cúc. Thay cho tấm thiệp hồng chưa kịp trao tay. Sự có mặt của bạn là niềm vui và niềm vinh hạnh của gia đình"
         />
         <meta property="og:image" content={`${siteUrl}/images/img-300.png`} />
         <meta property="og:image:width" content="300" />

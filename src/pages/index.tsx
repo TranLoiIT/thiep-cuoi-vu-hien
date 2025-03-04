@@ -1,8 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import { MutedOutlined, SoundOutlined } from "@ant-design/icons";
+import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import CalendarCom from "../components/Calendar";
+import CountdownTimer from "../components/CountdownTimer";
 import MapsCom from "../components/Maps";
 import ModalCustom from "../components/Modal";
 
@@ -12,13 +14,14 @@ const location_gai =
   "https://www.google.com/maps/dir//20.855473,105.8345393/@20.8554689,105.834603,66m/data=!3m1!1e3?hl=vi-VN&entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoASAFQAw%3D%3D";
 
 const Index = () => {
+  const { query } = useRouter();
   const [isAnimating, setIsAnimating] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(true);
   const [tooltip, setTooltip] = useState(true);
   const [location, setLocation] = useState("nam");
   const [modal, setModal] = useState<any>(null);
   const [qr, setQr] = useState<any>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
 
   const togglePlay = () => {
     // console.log("11", 11);
@@ -67,6 +70,13 @@ const Index = () => {
       { once: true }
     );
   }, []);
+
+  useEffect(() => {
+    if (query?.house) {
+      console.log('query?.house', query?.house)
+      setLocation(query.house.toString())
+    }
+  }, [query])
 
   return (
     <div
@@ -258,7 +268,7 @@ const Index = () => {
                   data-aos-delay="10"
                   data-aos-offset="0"
                   className="w-[36%]"
-                  src="/images/16.jpg"
+                  src="/images/6.jpg"
                 />
                 <img
                   data-aos="fade-up"
@@ -292,7 +302,7 @@ const Index = () => {
                       </div>
                       <div
                         onClick={() => setQr("nam")}
-                        className="bg-pink-300 rounded-lg w-2/5 py-[10px] text-sm font-medium cursor-pointer uppercase"
+                        className="bg-pink-300 rounded-lg w-1/2 py-[10px] text-sm font-medium cursor-pointer uppercase"
                       >
                         Quét gửi yêu thương
                       </div>
@@ -323,7 +333,7 @@ const Index = () => {
                       </div>
                       <div
                         onClick={() => setQr("nu")}
-                        className="bg-pink-300 rounded-lg w-2/5 py-[10px] text-sm font-medium cursor-pointer uppercase"
+                        className="bg-pink-300 rounded-lg w-1/2 py-[10px] text-sm font-medium cursor-pointer uppercase"
                       >
                         Quét gửi yêu thương
                       </div>
@@ -532,25 +542,38 @@ const Index = () => {
             </div>
           </div>
 
+          
+
           {/* thanks you */}
-          <div className="relative h-[700px]">
+          <div className="relative h-[600px]">
             <img
-              src="/images/6.jpg"
-              className="h-[700px] object-cover w-full opacity-50"
+              src="/images/16.jpg"
+              className="h-[600px] object-cover sm:object-bottom w-full opacity-50"
             />
-            <div className="absolute z-20 inset-x-0 inset-y-0 flex items-center">
+            <div className="absolute z-20 inset-x-0 inset-y-0 flex items-end pb-[120px]">
               <div className="min-w-full text-center">
                 <div
                   data-aos="fade-up"
                   data-aos-delay="700"
                   className="text-[64px] ms-madi"
-                  style={{ fontWeight: 700 }}
+                  style={{ fontWeight: 500 }}
                 >
-                  Thank You.
+                  Thank You!
+                </div>
+                <div 
+                  data-aos="fade-up"
+                  data-aos-delay="700"
+                  className="mt-3 text-[24px] ms-madi"
+                  style={{ fontWeight: 500 }}
+                >
+                  Sự hiện diện của bạn sẽ khiến hôn lễ của chúng <br />
+                  tôi trở lên ý nghĩa hơn bao giờ hết.
                 </div>
               </div>
             </div>
           </div>
+
+          <CountdownTimer targetDate="2025-03-24T13:00:00" />
         </div>
       )}
       {modal && <ModalCustom house={modal} onClose={() => setModal(null)} />}

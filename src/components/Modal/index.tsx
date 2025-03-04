@@ -98,8 +98,8 @@ const ModalCustom = ({
               {success ? (
                 <div className="absolute inset-x-0 inset-y-0">
                   <img
-                    src="/images/12.jpg"
-                    className="h-full rounded-2xl sm:object-none object-fill w-full opacity-50"
+                    src="/images/6.jpg"
+                    className="h-full rounded-2xl sm:object-cover object-top object-fill w-full opacity-50"
                   />
                   <div className="absolute z-20 inset-x-0 inset-y-0 flex items-center">
                     <div className="min-w-full  text-center">
@@ -109,7 +109,7 @@ const ModalCustom = ({
                         className="text-[64px] ms-madi"
                         style={{ fontWeight: 500 }}
                       >
-                        Thank You.
+                        Thank You!
                       </div>
                     </div>
                   </div>

@@ -69,7 +69,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="bg-[#fbeff6]">
+    <div className="bg-[#fbeff6] flex justify-center">
       <audio ref={audioRef} loop>
         <source src="/music/Em-Dong-Y-I-Do-Duc-Phuc-911.mp3" type="audio/mp3" />
       </audio>
@@ -80,7 +80,7 @@ const Index = () => {
           <div className="cloud cloudRight" />
         </div>
       ) : (
-        <div>
+        <div className="min-w-[375px] max-w-[520px]">
           <div className="ping z-50">
             <div
               className="absolute z-50 flex justify-center items-center bg-pink-400 h-10 w-10 rounded-full"
@@ -328,7 +328,7 @@ const Index = () => {
                   </div>
                 </div>
 
-                <div className="flex justify-center items-center redditSansCondensed">
+                <div className="lg:col-span-2 col-span-1 flex justify-center items-center redditSansCondensed">
                   <div
                     data-aos="fade-up"
                     data-aos-delay="10"

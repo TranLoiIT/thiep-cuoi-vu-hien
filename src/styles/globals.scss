@@ -93,7 +93,7 @@ button,
   height: 100%;
   z-index: 9999;
   display: flex;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 /* Mây trái */

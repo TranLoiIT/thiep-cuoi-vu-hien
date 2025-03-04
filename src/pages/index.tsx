@@ -58,9 +58,9 @@ const Index = () => {
     window.addEventListener(
       "scroll",
       () => {
-        console.log("1 :>> ", 1);
+        // console.log("1 :>> ", 1);
         setTimeout(() => {
-          console.log("2 :>> ", 2);
+          // console.log("2 :>> ", 2);
           setTooltip(false);
         }, 5 * 1000);
       },
@@ -69,7 +69,10 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="bg-[#fbeff6] flex justify-center">
+    <div
+      className="bg-[#fbeff6] flex justify-center over"
+      style={{ overflow: "hidden" }}
+    >
       <audio ref={audioRef} loop>
         <source src="/music/Em-Dong-Y-I-Do-Duc-Phuc-911.mp3" type="audio/mp3" />
       </audio>
@@ -268,7 +271,7 @@ const Index = () => {
                 <div className="flex justify-center items-center redditSansCondensed">
                   <div
                     data-aos="zoom-in"
-                    className="w-[90%] rounded-lg border-2 text-center p-3"
+                    className="lg:w-full w-[90%] rounded-lg border-2 text-center p-3"
                   >
                     <div className="uppercase font-bold text-[20px]">
                       Tiệc cưới nhà Trai
@@ -299,7 +302,7 @@ const Index = () => {
                 <div className="flex justify-center items-center redditSansCondensed">
                   <div
                     data-aos="zoom-in"
-                    className="w-[90%] rounded-lg border-2 text-center p-3"
+                    className="lg:w-full w-[90%] rounded-lg border-2 text-center p-3"
                   >
                     <div className="uppercase font-bold text-[20px]">
                       Tiệc cưới nhà gái

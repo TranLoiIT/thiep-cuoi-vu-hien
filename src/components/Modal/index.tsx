@@ -75,8 +75,8 @@ const ModalCustom = ({
         <div
           ref={modalRef}
           id="box-modal"
-          className="bg-white rounded-2xl relative pb-5 px-5 pt-12"
-          style={{ width: "90%", minHeight: "60%" }}
+          className="bg-white rounded-2xl relative pb-5 px-5 pt-12 lg:w-1/2 w-[90%]"
+          style={{ minHeight: showQR ? "90%" : "60%" }}
         >
           <div
             onClick={() => onClose()}
@@ -116,7 +116,7 @@ const ModalCustom = ({
                 </div>
               ) : (
                 <>
-                  <div className="text-center ms-madi text-[32px] mb-4">
+                  <div className="text-center ms-madi lg:text-[52px] text-[32px] mb-4">
                     Gửi Lời chúc
                   </div>
                   <Form layout="vertical" onFinish={onFinish}>

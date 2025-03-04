@@ -7,6 +7,7 @@ import CalendarCom from "../components/Calendar";
 import CountdownTimer from "../components/CountdownTimer";
 import MapsCom from "../components/Maps";
 import ModalCustom from "../components/Modal";
+import ViewImage from "../components/ViewImage";
 
 const location_trai =
   "https://www.google.com/maps/dir//20.8403879,105.8567249/@20.8403249,105.8564212,66m/data=!3m1!1e3?hl=vi-VN&entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoASAFQAw%3D%3D";
@@ -16,9 +17,10 @@ const location_gai =
 const Index = () => {
   const { query } = useRouter();
   const [isAnimating, setIsAnimating] = useState(true);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [tooltip, setTooltip] = useState(true);
-  const [location, setLocation] = useState("nam");
+  const [isPriviewImg, setIsPriview] = useState<any>(null);
+  const [location, setLocation] = useState("nu");
   const [modal, setModal] = useState<any>(null);
   const [qr, setQr] = useState<any>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -65,18 +67,18 @@ const Index = () => {
         setTimeout(() => {
           // console.log("2 :>> ", 2);
           setTooltip(false);
-        }, 5 * 1000);
+        }, 10 * 1000);
       },
       { once: true }
     );
   }, []);
 
-  useEffect(() => {
-    if (query?.house) {
-      console.log('query?.house', query?.house)
-      setLocation(query.house.toString())
-    }
-  }, [query])
+  // useEffect(() => {
+  //   if (query?.house) {
+  //     // console.log('query?.house', query?.house)
+  //     setLocation(query.house.toString())
+  //   }
+  // }, [query])
 
   return (
     <div
@@ -109,7 +111,7 @@ const Index = () => {
               <div
                 data-aos="fade-right"
                 // data-aos-delay="10"
-                className="h-10 w-[286px] text-[12px] bg-white border border-pink-400 rounded-full flex justify-end items-center pr-2"
+                className="h-10 w-[312px] text-[12px] bg-white border border-pink-400 rounded-full flex justify-end items-center pr-2"
               >
                 Click vào đây nếu như bạn muốn phát nhạc!
               </div>
@@ -466,30 +468,35 @@ const Index = () => {
                     data-aos-delay="100"
                     src="/images/14.jpg"
                     alt="1"
+                    onClick={() => setIsPriview(14)}
                   />
                   <img
                     data-aos="fade-up"
                     data-aos-delay="150"
                     src="/images/18.jpg"
                     alt="1"
+                    onClick={() => setIsPriview(18)}
                   />
                   <img
                     data-aos="fade-up"
                     data-aos-delay="200"
                     src="/images/3.jpg"
                     alt="1"
+                    onClick={() => setIsPriview(3)}
                   />
                   <img
                     data-aos="fade-up"
                     data-aos-delay="150"
                     src="/images/7.jpg"
                     alt="1"
+                    onClick={() => setIsPriview(7)}
                   />
                   <img
                     data-aos="fade-up"
                     data-aos-delay="300"
                     src="/images/15.JPG"
                     alt="1"
+                    onClick={() => setIsPriview(15)}
                   />
                 </div>
 
@@ -501,6 +508,7 @@ const Index = () => {
                     data-aos-delay="100"
                     src="/images/5.jpg"
                     alt="1"
+                    onClick={() => setIsPriview(5)}
                   />
                   <div className="flex flex-col gap-3">
                     <img
@@ -509,6 +517,7 @@ const Index = () => {
                       className="w-full"
                       src="/images/13.jpg"
                       alt="1"
+                    onClick={() => setIsPriview(13)}
                     />
                     <img
                       data-aos="fade-up"
@@ -516,6 +525,7 @@ const Index = () => {
                       className="w-full"
                       src="/images/17.jpg"
                       alt="1"
+                    onClick={() => setIsPriview(17)}
                     />
                   </div>
                   <img
@@ -524,25 +534,26 @@ const Index = () => {
                     data-aos-delay="200"
                     src="/images/12.jpg"
                     alt="1"
+                    onClick={() => setIsPriview(12)}
                   />
                   <img
                     data-aos="fade-up"
                     data-aos-delay="250"
                     src="/images/10.jpg"
                     alt="1"
+                    onClick={() => setIsPriview(10)}
                   />
                   <img
                     data-aos="fade-up"
                     data-aos-delay="300"
                     src="/images/2.jpg"
                     alt="1"
+                    onClick={() => setIsPriview(2)}
                   />
                 </div>
               </div>
             </div>
           </div>
-
-          
 
           {/* thanks you */}
           <div className="relative h-[600px]">
@@ -574,11 +585,14 @@ const Index = () => {
           </div>
 
           <CountdownTimer targetDate="2025-03-24T13:00:00" />
+          {
+            isPriviewImg && <ViewImage initialIndex={isPriviewImg - 1} _onClose={() => setIsPriview(null)} />
+          }
+          
         </div>
       )}
       {modal && <ModalCustom house={modal} onClose={() => setModal(null)} />}
       {qr && <ModalCustom house={qr} onClose={() => setQr(null)} showQR />}
-      {/* <ViewImage /> */}
     </div>
   );
 };

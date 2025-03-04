@@ -1,4 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import { ArrowLeft2, ArrowRight2 } from "iconsax-react";
+import { useEffect, useState } from "react";
 
 const DATA_IMG = [
   { id: 1, url: "/images/1.jpg" },
@@ -23,14 +25,79 @@ const DATA_IMG = [
   { id: 20, url: "/images/20.jpg" },
 ];
 
-const ViewImage = () => {
+const ViewImage = ({ initialIndex, _onClose = () => {} }: {initialIndex: number, _onClose?: () => void}) => {
+  const [currentIndex, setCurrentIndex] = useState(initialIndex);
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : DATA_IMG.length - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev < DATA_IMG.length - 1 ? prev + 1 : 0));
+  };
+
+  // Bắt đầu vuốt
+  const handleTouchStart = (e: any) => {
+    touchStartX = e.touches[0].clientX;
+  };
+
+  // Kết thúc vuốt
+  const handleTouchEnd = (e: any) => {
+    touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX - touchEndX;
+
+    if (diff > 50) {
+      // Vuốt trái -> ảnh kế tiếp
+      handleNext();
+    } else if (diff < -50) {
+      // Vuốt phải -> ảnh trước đó
+      handlePrev();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") handlePrev();
+      if (e.key === "ArrowRight") handleNext();
+    });
+
+    return () => {
+      document.removeEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") handlePrev();
+        if (e.key === "ArrowRight") handleNext();
+      });
+    };
+  }, []);
+
   return (
-    <div className="fixed inset-0 bg-black opacity-50 z-[999999999]">
-      <div className="absolute inset-y-[50%] left-1">
-        <ArrowLeft2 size="24" color="#FFF" />
-      </div>
-      <div className="absolute inset-y-[50%] right-1">
-        <ArrowRight2 size="24" color="#FFF" />
+    <div
+      className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[999999999]"
+    >
+      <div
+        className="relative w-full h-full flex justify-center items-center"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
+        <img
+          src={DATA_IMG[currentIndex].url}
+          alt="Preview"
+          className="2xl:w-[30%] xl:w-[35%] lg:w-1/2 sm:w-3/5 w-[95%] rounded-lg shadow-lg"
+        />
+        <div
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-black rounded-full opacity-50 text-white bg-none p-2"
+          onClick={handlePrev}
+        >
+          <ArrowLeft2 size="24" color="#FFF" />
+        </div>
+        <div
+          className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-black rounded-full opacity-50 text-white bg-none p-2"
+          onClick={handleNext}
+        >
+          <ArrowRight2 size="24" color="#FFF" />
+        </div>
+        <div className="absolute top-2 right-3 text-white z-10 text-[20px]" onClick={() => _onClose()}>X</div>
       </div>
     </div>
   );

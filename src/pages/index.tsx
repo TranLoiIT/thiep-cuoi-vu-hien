@@ -578,7 +578,7 @@ const Index = () => {
                   style={{ fontWeight: 500 }}
                 >
                   Sự hiện diện của bạn sẽ khiến hôn lễ của chúng <br />
-                  tôi trở lên ý nghĩa hơn bao giờ hết.
+                  tôi trở nên ý nghĩa hơn bao giờ hết.
                 </div>
               </div>
             </div>

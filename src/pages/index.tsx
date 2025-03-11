@@ -203,10 +203,10 @@ const Index = () => {
                   Nhà trai
                 </div>
                 <div className="uppercase text-[16px] font-bold redditSansCondensed">
-                  Ông Trần Mạnh Thắng
+                  Ông: Trần Mạnh Thắng
                 </div>
                 <div className="uppercase text-[16px] font-bold redditSansCondensed">
-                  Bà Tạ Thị Cơ
+                  Bà: Tạ Thị Cơ
                 </div>
                 <div className="mt-5 text-center">
                   <p className="italic text-gray-700">Chú Rể</p>
@@ -222,10 +222,10 @@ const Index = () => {
                   Nhà gái
                 </div>
                 <div className="uppercase text-[16px] font-bold redditSansCondensed">
-                  Ông Đàm Viết Phú
+                  Ông: Đàm Viết Phú
                 </div>
                 <div className="uppercase text-[16px] font-bold redditSansCondensed">
-                  Bà Phạm Thị Yến
+                  Bà: Phạm Thị Yến
                 </div>
                 <div className="mt-5 text-center">
                   <p className="italic text-gray-700">Cô Dâu</p>
@@ -270,7 +270,7 @@ const Index = () => {
                   data-aos-delay="10"
                   data-aos-offset="0"
                   className="w-[36%]"
-                  src="/images/6.jpg"
+                  src="/images/11.jpg"
                 />
                 <img
                   data-aos="fade-up"

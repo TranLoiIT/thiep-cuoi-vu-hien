@@ -319,7 +319,7 @@ const Index = () => {
                     <div className="uppercase font-bold text-[20px]">
                       Tiệc cưới nhà gái
                     </div>
-                    <div className="text-gray-700">Chủ Nhật | 10H30</div>
+                    <div className="text-gray-700">Chủ Nhật | 10H00</div>
                     <div className="font-medium text-[20px]">
                       2 3 . 0 3 . 2 0 2 5
                     </div>
@@ -480,7 +480,7 @@ const Index = () => {
                   <img
                     data-aos="fade-up"
                     data-aos-delay="200"
-                    src="/images/3.jpg"
+                    src="/images/6.jpg"
                     alt="1"
                     onClick={() => setIsPriview(3)}
                   />
@@ -517,7 +517,7 @@ const Index = () => {
                       className="w-full"
                       src="/images/13.jpg"
                       alt="1"
-                    onClick={() => setIsPriview(13)}
+                      onClick={() => setIsPriview(13)}
                     />
                     <img
                       data-aos="fade-up"
@@ -525,7 +525,7 @@ const Index = () => {
                       className="w-full"
                       src="/images/17.jpg"
                       alt="1"
-                    onClick={() => setIsPriview(17)}
+                      onClick={() => setIsPriview(17)}
                     />
                   </div>
                   <img
@@ -571,7 +571,7 @@ const Index = () => {
                 >
                   Thank You!
                 </div>
-                <div 
+                <div
                   data-aos="fade-up"
                   data-aos-delay="700"
                   className="mt-3 text-[24px] ms-madi"
@@ -585,10 +585,12 @@ const Index = () => {
           </div>
 
           <CountdownTimer targetDate="2025-03-24T13:00:00" />
-          {
-            isPriviewImg && <ViewImage initialIndex={isPriviewImg - 1} _onClose={() => setIsPriview(null)} />
-          }
-          
+          {isPriviewImg && (
+            <ViewImage
+              initialIndex={isPriviewImg - 1}
+              _onClose={() => setIsPriview(null)}
+            />
+          )}
         </div>
       )}
       {modal && <ModalCustom house={modal} onClose={() => setModal(null)} />}

@@ -2,7 +2,7 @@
 import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Document() {
-  const siteUrl = "https://thiep-cuoi-cuc-loi.netlify.app/";
+  const siteUrl = "https://thiep-cuoi-vu-hien.netlify.app";
   return (
     <Html lang="vn">
       <Head>

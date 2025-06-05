@@ -88,7 +88,7 @@ const ModalCustom = ({
             <div className="absolute inset-x-0 inset-y-0">
               <img
                 src={
-                  house === "nam" ? "/images/qr-ck.jfif" : "/images/qr-vo.jfif"
+                  house === "nam" ? "/images/ck.jpg" : "/images/vk.jpg"
                 }
                 className="h-full rounded-2xl object-cover w-full"
               />

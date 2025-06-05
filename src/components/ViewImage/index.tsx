@@ -15,14 +15,6 @@ const DATA_IMG = [
   { id: 10, url: "/images/10.jpg" },
   { id: 11, url: "/images/11.jpg" },
   { id: 12, url: "/images/12.jpg" },
-  { id: 13, url: "/images/13.JPG" },
-  { id: 14, url: "/images/14.jpg" },
-  { id: 15, url: "/images/15.jpg" },
-  { id: 16, url: "/images/16.jpg" },
-  { id: 17, url: "/images/17.jpg" },
-  { id: 18, url: "/images/18.jpg" },
-  { id: 19, url: "/images/19.jpg" },
-  { id: 20, url: "/images/20.jpg" },
 ];
 
 const ViewImage = ({ initialIndex, _onClose = () => {} }: {initialIndex: number, _onClose?: () => void}) => {

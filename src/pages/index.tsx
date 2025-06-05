@@ -10,9 +10,9 @@ import ModalCustom from "../components/Modal";
 import ViewImage from "../components/ViewImage";
 
 const location_trai =
-  "https://www.google.com/maps/dir//20.8403879,105.8567249/@20.8403249,105.8564212,66m/data=!3m1!1e3?hl=vi-VN&entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoASAFQAw%3D%3D";
+  "https://www.google.com/maps/place/20%C2%B024'10.0%22N+106%C2%B000'44.2%22E/@20.4026407,106.0122958,266m/data=!3m1!1e3!4m4!3m3!8m2!3d20.402779!4d106.012265?entry=ttu&g_ep=EgoyMDI1MDYwMi4wIKXMDSoASAFQAw%3D%3D";
 const location_gai =
-  "https://www.google.com/maps/dir//20.855473,105.8345393/@20.8554689,105.834603,66m/data=!3m1!1e3?hl=vi-VN&entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoASAFQAw%3D%3D";
+  "https://www.google.com/maps/place/20%C2%B015'22.2%22N+106%C2%B013'28.9%22E/@20.256174,106.224686,1067m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d20.256174!4d106.224686?entry=ttu&g_ep=EgoyMDI1MDYwMi4wIKXMDSoASAFQAw%3D%3D";
 
 const Index = () => {
   const { query } = useRouter();
@@ -20,7 +20,7 @@ const Index = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [tooltip, setTooltip] = useState(true);
   const [isPriviewImg, setIsPriview] = useState<any>(null);
-  const [location, setLocation] = useState("nu");
+  const [location, setLocation] = useState("nam");
   const [modal, setModal] = useState<any>(null);
   const [qr, setQr] = useState<any>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -132,14 +132,14 @@ const Index = () => {
               className="text-center text-[30px] ms-madi"
               data-aos-delay="100"
             >
-              Trần Lợi & Thu Cúc
+              Hoài Vũ & Thanh Hiền
             </div>
             <div
               data-aos="fade-up"
               data-aos-delay="700"
               className="flex justify-center items-center mt-[42px]"
             >
-              <img src="/images/11.jpg" alt="banner" className="w-[80%]" />
+              <img src="/images/Q87_3368.jpg" alt="banner" className="w-[80%]" />
             </div>
             <div
               data-aos="fade-up"
@@ -148,12 +148,12 @@ const Index = () => {
             >
               <div className="w-[80%] flex items-center px-6">
                 <div className="px-2 text-[20px] leading-[24px] w-[35%] domine font-medium">
-                  <div>13:00</div>
+                  <div>11:00</div>
                   <div>Chủ Nhật</div>
                 </div>
                 <div className="border-r border-solid border-black h-[42px] opacity-70" />
                 <div className="flex justify-end items-center w-[65%] gap-5">
-                  <div className="text-[36px] domine font-medium">23.03</div>
+                  <div className="text-[36px] domine font-medium">20.07</div>
                   <div className="text-[20px] leading-[24px] domine font-medium">
                     <div>20</div>
                     <div>25</div>
@@ -161,7 +161,7 @@ const Index = () => {
                 </div>
               </div>
               <div className="flex justify-center items-center mt-1 italic text-gray-700">
-                (Ngày 24 Tháng 03 Năm Ất Tỵ )
+                (Ngày 26 Tháng 06 Năm Ất Tỵ )
               </div>
             </div>
 
@@ -192,25 +192,25 @@ const Index = () => {
                 data-aos-delay="50"
                 className="border-[4px] border-pink-200"
               >
-                <img src="/images/1.jpg" alt="aa" />
+                <img src="/images/Q87_3158.jpg" alt="aa" />
               </div>
               <div
                 data-aos="fade-up"
                 data-aos-delay="300"
                 className="flex flex-col items-center justify-center"
               >
-                <div className="uppercase text-[16px] font-bold redditSansCondensed">
+                <div className="uppercase xl:text-[16px] text-[14px] font-bold redditSansCondensed">
                   Nhà trai
                 </div>
-                <div className="uppercase text-[16px] font-bold redditSansCondensed">
-                  Ông: Trần Mạnh Thắng
+                <div className="uppercase xl:text-[16px] text-[14px] font-bold redditSansCondensed">
+                  Ông: Văn Tất Quyết
                 </div>
-                <div className="uppercase text-[16px] font-bold redditSansCondensed">
-                  Bà: Tạ Thị Cơ
+                <div className="uppercase xl:text-[16px] text-[14px] font-bold redditSansCondensed">
+                  Bà: Trần Thị Mai
                 </div>
                 <div className="mt-5 text-center">
                   <p className="italic text-gray-700">Chú Rể</p>
-                  <p className="text-[36px] ms-madi">Trần Lợi</p>
+                  <p className="text-[36px] ms-madi">Hoài Vũ</p>
                 </div>
               </div>
               <div
@@ -218,18 +218,18 @@ const Index = () => {
                 data-aos-delay="100"
                 className="flex flex-col items-center justify-center"
               >
-                <div className="uppercase text-[16px] font-bold redditSansCondensed">
+                <div className="uppercase xl:text-[16px] text-[14px] font-bold redditSansCondensed">
                   Nhà gái
                 </div>
-                <div className="uppercase text-[16px] font-bold redditSansCondensed">
-                  Ông: Đàm Viết Phú
+                <div className="uppercase xl:text-[16px] text-[14px] font-bold redditSansCondensed">
+                  Ông: Nguyễn Văn Sử
                 </div>
-                <div className="uppercase text-[16px] font-bold redditSansCondensed">
-                  Bà: Phạm Thị Yến
+                <div className="uppercase xl:text-[16px] text-[14px] font-bold redditSansCondensed">
+                  Bà: Nguyễn Thị Thanh Nhàn
                 </div>
                 <div className="mt-5 text-center">
                   <p className="italic text-gray-700">Cô Dâu</p>
-                  <p className="text-[36px] ms-madi">Thu Cúc</p>
+                  <p className="text-[36px] ms-madi">Thanh Hiền</p>
                 </div>
               </div>
               <div
@@ -237,7 +237,7 @@ const Index = () => {
                 data-aos-delay="10"
                 className="border-[4px] border-pink-200"
               >
-                <img src="/images/9.jpg" />
+                <img src="/images/Q87_3631.jpg" />
               </div>
             </div>
 
@@ -254,7 +254,7 @@ const Index = () => {
                   Thư Mời
                 </div>
                 <p className="uppercase text-[14px]">
-                  Tham dự lễ thành hôn của Trần Lợi & Thu Cúc
+                  Tham dự lễ thành hôn của Hoài Vũ & Thanh Hiền
                 </p>
               </div>
               <div className="flex justify-start items-center gap-2 mt-5">
@@ -262,7 +262,7 @@ const Index = () => {
                   data-aos="fade-up"
                   data-aos-delay="100"
                   className="w-[30%]"
-                  src="/images/8.jpg"
+                  src="/images/Q87_3512.jpg"
                 />
                 <img
                   data-aos="fade-zoom-in"
@@ -270,13 +270,13 @@ const Index = () => {
                   data-aos-delay="10"
                   data-aos-offset="0"
                   className="w-[36%]"
-                  src="/images/11.jpg"
+                  src="/images/Q87_3563.jpg"
                 />
                 <img
                   data-aos="fade-up"
                   data-aos-delay="100"
                   className="w-[30%]"
-                  src="/images/4.jpg"
+                  src="/images/Q87_3490.jpg"
                 />
               </div>
               <div className="grid lg:grid-cols-2 grid-cols-1 gap-5 mt-6">
@@ -290,10 +290,10 @@ const Index = () => {
                     </div>
                     <div className="text-gray-700">Thứ 7 | 17H00</div>
                     <div className="font-medium text-[20px]">
-                      2 2 . 0 3 . 2 0 2 5
+                      1 9 . 0 7 . 2 0 2 5
                     </div>
                     <div className="text-gray-700 italic mb-4">
-                      (Tức Ngày 23 Tháng 02 Năm Ất Tỵ)
+                      (Tức Ngày 25 Tháng 06 Năm Ất Tỵ)
                     </div>
                     <div className="flex flex-col justify-center items-center gap-1">
                       <div
@@ -319,12 +319,12 @@ const Index = () => {
                     <div className="uppercase font-bold text-[20px]">
                       Tiệc cưới nhà gái
                     </div>
-                    <div className="text-gray-700">Chủ Nhật | 10H00</div>
+                    <div className="text-gray-700">Thứ Bảy | 17H00</div>
                     <div className="font-medium text-[20px]">
-                      2 3 . 0 3 . 2 0 2 5
+                      1 9 . 0 7 . 2 0 2 5
                     </div>
                     <div className="text-gray-700 italic mb-4">
-                      (Tức Ngày 24 Tháng 02 Năm Ất Tỵ)
+                      (Tức Ngày 25 Tháng 06 Năm Ất Tỵ)
                     </div>
                     <div className="flex flex-col justify-center items-center gap-1">
                       <div
@@ -357,7 +357,7 @@ const Index = () => {
                       Save the date
                     </div>
                     <div className="text-[16px] leading-[16px] domine font-medium uppercase">
-                      Tháng 3 - 2025
+                      Tháng 7 - 2025
                     </div>
                     {/* imgae lịch */}
 
@@ -418,8 +418,8 @@ const Index = () => {
                       {/* <div className="uppercase font-medium bodoniModa">Tân Gia nhà trai</div> */}
                       <div className="text-[15px] font-normal">
                         {location === "nam"
-                          ? "Gia Khánh- Nguyễn Trãi -Thường Tín - Hà Nội"
-                          : "Ngọc Động - Tiền Phong -Thường Tín - Hà Nội"}
+                          ? "Vinh Tứ - An Lão - Bình Lục - Hà Nam"
+                          : "Cầu Đen - Trực Nội - Trực Ninh - Nam Định"}
                       </div>
                     </div>
                   </div>
@@ -440,9 +440,9 @@ const Index = () => {
                   <div className="mb-3 px-3">
                     <MapsCom
                       center={
-                        location === "nam"
-                          ? { lat: 20.84041, lng: 105.85661 }
-                          : { lat: 20.855473, lng: 105.834539 }
+                        location === "nu"
+                          ? { lat: 20.256174, lng: 106.224686 }
+                          : { lat: 20.402779, lng: 106.012265 }
                       }
                     />
                   </div>
@@ -466,23 +466,23 @@ const Index = () => {
                   <img
                     data-aos="fade-up"
                     data-aos-delay="100"
-                    src="/images/14.jpg"
+                    src="/images/1.jpg"
                     alt="1"
-                    onClick={() => setIsPriview(14)}
+                    onClick={() => setIsPriview(1)}
                   />
                   <img
                     data-aos="fade-up"
                     data-aos-delay="150"
-                    src="/images/18.jpg"
+                    src="/images/3.jpg"
                     alt="1"
-                    onClick={() => setIsPriview(18)}
+                    onClick={() => setIsPriview(3)}
                   />
                   <img
                     data-aos="fade-up"
                     data-aos-delay="200"
-                    src="/images/6.jpg"
+                    src="/images/5.jpg"
                     alt="1"
-                    onClick={() => setIsPriview(3)}
+                    onClick={() => setIsPriview(5)}
                   />
                   <img
                     data-aos="fade-up"
@@ -494,9 +494,16 @@ const Index = () => {
                   <img
                     data-aos="fade-up"
                     data-aos-delay="300"
-                    src="/images/15.JPG"
+                    src="/images/9.JPG"
                     alt="1"
-                    onClick={() => setIsPriview(15)}
+                    onClick={() => setIsPriview(9)}
+                  />
+                  <img
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                    src="/images/11.JPG"
+                    alt="1"
+                    onClick={() => setIsPriview(11)}
                   />
                 </div>
 
@@ -506,35 +513,35 @@ const Index = () => {
                     className="mt-5"
                     data-aos="fade-up"
                     data-aos-delay="100"
-                    src="/images/5.jpg"
+                    src="/images/2.jpg"
                     alt="1"
-                    onClick={() => setIsPriview(5)}
+                    onClick={() => setIsPriview(2)}
                   />
                   <div className="flex flex-col gap-3">
                     <img
                       data-aos="fade-up"
                       data-aos-delay="130"
                       className="w-full"
-                      src="/images/13.jpg"
+                      src="/images/4.jpg"
                       alt="1"
-                      onClick={() => setIsPriview(13)}
+                      onClick={() => setIsPriview(4)}
                     />
                     <img
                       data-aos="fade-up"
                       data-aos-delay="150"
                       className="w-full"
-                      src="/images/17.jpg"
+                      src="/images/6.jpg"
                       alt="1"
-                      onClick={() => setIsPriview(17)}
+                      onClick={() => setIsPriview(6)}
                     />
                   </div>
                   <img
                     className="mt-1"
                     data-aos="fade-up"
                     data-aos-delay="200"
-                    src="/images/12.jpg"
+                    src="/images/8.jpg"
                     alt="1"
-                    onClick={() => setIsPriview(12)}
+                    onClick={() => setIsPriview(8)}
                   />
                   <img
                     data-aos="fade-up"
@@ -546,9 +553,9 @@ const Index = () => {
                   <img
                     data-aos="fade-up"
                     data-aos-delay="300"
-                    src="/images/2.jpg"
+                    src="/images/12.jpg"
                     alt="1"
-                    onClick={() => setIsPriview(2)}
+                    onClick={() => setIsPriview(12)}
                   />
                 </div>
               </div>
@@ -558,7 +565,7 @@ const Index = () => {
           {/* thanks you */}
           <div className="relative h-[600px]">
             <img
-              src="/images/16.jpg"
+              src="/images/Q87_3673.jpg"
               className="h-[600px] object-cover sm:object-bottom w-full opacity-50"
             />
             <div className="absolute z-20 inset-x-0 inset-y-0 flex items-end pb-[120px]">
@@ -584,7 +591,7 @@ const Index = () => {
             </div>
           </div>
 
-          <CountdownTimer targetDate="2025-03-24T13:00:00" />
+          <CountdownTimer targetDate="2025-07-20T11:00:00" />
           {isPriviewImg && (
             <ViewImage
               initialIndex={isPriviewImg - 1}

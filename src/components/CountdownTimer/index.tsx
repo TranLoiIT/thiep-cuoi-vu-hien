@@ -30,8 +30,7 @@ const CountdownTimer = ({ targetDate }: {targetDate: string}) => {
     <div
         className="mt-5 h-[320px] w-full relative"
     >
-        {/* style={{ backgroundImage: "url('/images/13.JPG')" }} */}
-        <img src="/images/13.JPG" className="h-full object-cover w-full" alt="a" />
+        <img src="/images/Q87_3548.jpg" className="h-full object-cover w-full" alt="a" />
         <div className="absolute inset-0 bg-black opacity-50" />
         <div className="absolute inset-0 z-10">
             <div className="h-full w-full flex flex-col justify-center items-center gap-4 text-white">

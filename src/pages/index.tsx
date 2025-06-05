@@ -319,7 +319,7 @@ const Index = () => {
                     <div className="uppercase font-bold text-[20px]">
                       Tiệc cưới nhà gái
                     </div>
-                    <div className="text-gray-700">Thứ Bảy | 17H00</div>
+                    <div className="text-gray-700">Thứ 7 | 17H00</div>
                     <div className="font-medium text-[20px]">
                       1 9 . 0 7 . 2 0 2 5
                     </div>

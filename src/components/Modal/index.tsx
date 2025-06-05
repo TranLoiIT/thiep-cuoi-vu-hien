@@ -90,7 +90,7 @@ const ModalCustom = ({
                 src={
                   house === "nam" ? "/images/ck.jpg" : "/images/vk.jpg"
                 }
-                className="h-full rounded-2xl object-cover w-full"
+                className="h-full rounded-2xl xl:object-contain object-cover w-full"
               />
             </div>
           ) : (

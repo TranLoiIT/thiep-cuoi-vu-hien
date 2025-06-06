@@ -139,7 +139,7 @@ const Index = () => {
               data-aos-delay="700"
               className="flex justify-center items-center mt-[42px]"
             >
-              <img src="/images/Q87_3368.jpg" alt="banner" className="w-[80%]" />
+              <img src="/images/6.jpg" alt="banner" className="w-[80%]" />
             </div>
             <div
               data-aos="fade-up"
@@ -192,7 +192,7 @@ const Index = () => {
                 data-aos-delay="50"
                 className="border-[4px] border-pink-200"
               >
-                <img src="/images/Q87_3158.jpg" alt="aa" />
+                <img src="/images/2.jpg" alt="aa" />
               </div>
               <div
                 data-aos="fade-up"
@@ -237,7 +237,7 @@ const Index = () => {
                 data-aos-delay="10"
                 className="border-[4px] border-pink-200"
               >
-                <img src="/images/Q87_3631.jpg" />
+                <img src="/images/18.jpg" />
               </div>
             </div>
 
@@ -262,7 +262,7 @@ const Index = () => {
                   data-aos="fade-up"
                   data-aos-delay="100"
                   className="w-[30%]"
-                  src="/images/Q87_3512.jpg"
+                  src="/images/13.jpg"
                 />
                 <img
                   data-aos="fade-zoom-in"
@@ -270,13 +270,13 @@ const Index = () => {
                   data-aos-delay="10"
                   data-aos-offset="0"
                   className="w-[36%]"
-                  src="/images/Q87_3563.jpg"
+                  src="/images/16.jpg"
                 />
                 <img
                   data-aos="fade-up"
                   data-aos-delay="100"
                   className="w-[30%]"
-                  src="/images/Q87_3490.jpg"
+                  src="/images/12.jpg"
                 />
               </div>
               <div className="grid lg:grid-cols-2 grid-cols-1 gap-5 mt-6">
@@ -304,7 +304,7 @@ const Index = () => {
                       </div>
                       <div
                         onClick={() => setQr("nam")}
-                        className="bg-pink-300 rounded-lg w-1/2 py-[10px] text-sm font-medium cursor-pointer uppercase"
+                        className="bg-pink-200 rounded-lg w-1/2 py-[10px] text-sm font-medium cursor-pointer uppercase"
                       >
                         Quét gửi yêu thương
                       </div>
@@ -335,7 +335,7 @@ const Index = () => {
                       </div>
                       <div
                         onClick={() => setQr("nu")}
-                        className="bg-pink-300 rounded-lg w-1/2 py-[10px] text-sm font-medium cursor-pointer uppercase"
+                        className="bg-pink-200 rounded-lg w-1/2 py-[10px] text-sm font-medium cursor-pointer uppercase"
                       >
                         Quét gửi yêu thương
                       </div>
@@ -473,35 +473,35 @@ const Index = () => {
                   <img
                     data-aos="fade-up"
                     data-aos-delay="150"
-                    src="/images/3.jpg"
+                    src="/images/4.jpg"
                     alt="1"
                     onClick={() => setIsPriview(3)}
                   />
                   <img
                     data-aos="fade-up"
                     data-aos-delay="200"
-                    src="/images/5.jpg"
+                    src="/images/7.jpg"
                     alt="1"
                     onClick={() => setIsPriview(5)}
                   />
                   <img
                     data-aos="fade-up"
                     data-aos-delay="150"
-                    src="/images/7.jpg"
+                    src="/images/9.jpg"
                     alt="1"
                     onClick={() => setIsPriview(7)}
                   />
                   <img
                     data-aos="fade-up"
                     data-aos-delay="300"
-                    src="/images/9.JPG"
+                    src="/images/11.jpg"
                     alt="1"
                     onClick={() => setIsPriview(9)}
                   />
                   <img
                     data-aos="fade-up"
                     data-aos-delay="300"
-                    src="/images/11.JPG"
+                    src="/images/17.jpg"
                     alt="1"
                     onClick={() => setIsPriview(11)}
                   />
@@ -513,7 +513,7 @@ const Index = () => {
                     className="mt-5"
                     data-aos="fade-up"
                     data-aos-delay="100"
-                    src="/images/2.jpg"
+                    src="/images/3.jpg"
                     alt="1"
                     onClick={() => setIsPriview(2)}
                   />
@@ -522,7 +522,7 @@ const Index = () => {
                       data-aos="fade-up"
                       data-aos-delay="130"
                       className="w-full"
-                      src="/images/4.jpg"
+                      src="/images/5.jpg"
                       alt="1"
                       onClick={() => setIsPriview(4)}
                     />
@@ -530,7 +530,7 @@ const Index = () => {
                       data-aos="fade-up"
                       data-aos-delay="150"
                       className="w-full"
-                      src="/images/6.jpg"
+                      src="/images/8.jpg"
                       alt="1"
                       onClick={() => setIsPriview(6)}
                     />
@@ -539,21 +539,21 @@ const Index = () => {
                     className="mt-1"
                     data-aos="fade-up"
                     data-aos-delay="200"
-                    src="/images/8.jpg"
+                    src="/images/10.jpg"
                     alt="1"
                     onClick={() => setIsPriview(8)}
                   />
                   <img
                     data-aos="fade-up"
                     data-aos-delay="250"
-                    src="/images/10.jpg"
+                    src="/images/14.jpg"
                     alt="1"
                     onClick={() => setIsPriview(10)}
                   />
                   <img
                     data-aos="fade-up"
                     data-aos-delay="300"
-                    src="/images/12.jpg"
+                    src="/images/19.jpg"
                     alt="1"
                     onClick={() => setIsPriview(12)}
                   />
@@ -565,8 +565,8 @@ const Index = () => {
           {/* thanks you */}
           <div className="relative h-[600px]">
             <img
-              src="/images/Q87_3673.jpg"
-              className="h-[600px] object-cover sm:object-bottom w-full opacity-50"
+              src="/images/14.jpg"
+              className="h-[600px] object-cover sm:object-top w-full opacity-50"
             />
             <div className="absolute z-20 inset-x-0 inset-y-0 flex items-end pb-[120px]">
               <div className="min-w-full text-center">

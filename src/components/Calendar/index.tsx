@@ -15,7 +15,7 @@ const CalendarCom = () => {
                 {
                     thu.map((t, idx: number) => <div
                         key={`thu_id-t__${idx+1}`}
-                        className="text-center bg-pink-500 py-2 font-bold"
+                        className="text-center bg-pink-200 py-2 font-bold"
                     >{t}</div>)
                 }
                 {
